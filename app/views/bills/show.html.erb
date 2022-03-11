@@ -1,0 +1,44 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Menu:</strong>
+  <%= @bill.menu %>
+</p>
+
+<p>
+  <strong>Presentation:</strong>
+  <%= @bill.presentation %>
+</p>
+
+<p>
+  <strong>Author:</strong>
+  <%= @bill.author %>
+</p>
+
+<p>
+  <strong>Current location:</strong>
+  <%= @bill.current_location %>
+</p>
+
+<p>
+  <strong>Status:</strong>
+  <%= @bill.status %>
+</p>
+
+<p>
+  <strong>End date deadline:</strong>
+  <%= @bill.end_date_deadline %>
+</p>
+
+<p>
+  <strong>Last processing date:</strong>
+  <%= @bill.last_processing_date %>
+</p>
+
+<p>
+  <strong>Last action:</strong>
+  <%= @bill.last_action %>
+</p>
+
+<%= link_to 'Edit', edit_bill_path(@bill) %> |
+<%= link_to 'Back', bills_path %>

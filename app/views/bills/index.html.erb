@@ -1,0 +1,41 @@
+<p id="notice"><%= notice %></p>
+<%= button_to 'Scrape', scrape_bills_path %>
+<h1>Bills</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Menu</th>
+      <th>Presentation</th>
+      <th>Author</th>
+      <th>Current location</th>
+      <th>Status</th>
+      <th>End date deadline</th>
+      <th>Last processing date</th>
+      <th>Last action</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @bills.each do |bill| %>
+      <tr>
+        <td><%= bill.menu %></td>
+        <td><%= bill.presentation %></td>
+        <td><%= bill.author %></td>
+        <td><%= bill.current_location %></td>
+        <td><%= bill.status %></td>
+        <td><%= bill.end_date_deadline %></td>
+        <td><%= bill.last_processing_date %></td>
+        <td><%= bill.last_action %></td>
+        <td><%= link_to 'Show', bill %></td>
+        <td><%= link_to 'Edit', edit_bill_path(bill) %></td>
+        <td><%= link_to 'Destroy', bill, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Bill', new_bill_path %>

@@ -1,0 +1,57 @@
+<%= form_with(model: bill, local: true) do |form| %>
+  <% if bill.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(bill.errors.count, "error") %> prohibited this bill from being saved:</h2>
+
+      <ul>
+      <% bill.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :menu %>
+    <%= form.text_field :menu %>
+  </div>
+
+  <div class="field">
+    <%= form.label :presentation %>
+    <%= form.date_select :presentation %>
+  </div>
+
+  <div class="field">
+    <%= form.label :author %>
+    <%= form.text_field :author %>
+  </div>
+
+  <div class="field">
+    <%= form.label :current_location %>
+    <%= form.text_field :current_location %>
+  </div>
+
+  <div class="field">
+    <%= form.label :status %>
+    <%= form.text_field :status %>
+  </div>
+
+  <div class="field">
+    <%= form.label :end_date_deadline %>
+    <%= form.date_select :end_date_deadline %>
+  </div>
+
+  <div class="field">
+    <%= form.label :last_processing_date %>
+    <%= form.date_select :last_processing_date %>
+  </div>
+
+  <div class="field">
+    <%= form.label :last_action %>
+    <%= form.text_field :last_action %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
