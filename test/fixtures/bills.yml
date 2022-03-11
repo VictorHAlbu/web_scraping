@@ -1,0 +1,21 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  menu: MyString
+  presentation: 2022-03-10
+  author: MyString
+  current_location: MyString
+  status: MyString
+  end_date_deadline: 2022-03-10
+  last_processing_date: 2022-03-10
+  last_action: MyString
+
+two:
+  menu: MyString
+  presentation: 2022-03-10
+  author: MyString
+  current_location: MyString
+  status: MyString
+  end_date_deadline: 2022-03-10
+  last_processing_date: 2022-03-10
+  last_action: MyString
