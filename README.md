@@ -8,7 +8,7 @@ Para desenvolver o projeto foi usado as tecnologias: Ruby on Rails e Postgresql.
 
 ### Pré-requisitos
 
-Para rodar o projeto na sua máquina, deve ter instalado o ruby '2.5.1' e o 'rails', '~> 5.2.3' e Postgres
+Para rodar o projeto na sua máquina, é necessário o ruby '2.5.1' e o 'rails', '~> 5.2.3' e Postgres
 
 ```
 gem 'rails', '~> 5.2.3'
