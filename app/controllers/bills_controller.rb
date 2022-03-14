@@ -1,9 +1,11 @@
 class BillsController < ApplicationController
   before_action :set_bill, only: %i[ show edit update destroy ]
 
-  # GET /bills or /bills.json
   def index
     @bills = Bill.all
+    @bills = @bills.where(bill_id: params[:bill]) if params[:bill].present?
+    options = {page: params[:page] || 1, per_page: 10}
+    @bills = @bills.paginate(options)
   end
 
   
@@ -71,12 +73,10 @@ class BillsController < ApplicationController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
     def set_bill
       @bill = Bill.find(params[:id])
     end
 
-    # Only allow a list of trusted parameters through.
     def bill_params
       params.require(:bill).permit(:menu, :presentation, :author, :current_location, :status, :end_date_deadline, :last_processing_date, :last_action)
     end
