@@ -1,6 +1,9 @@
 # Web Scraping
 
-A aplicação é web Scraping onde o mesmo busca dados de https://sapl.camaranh.rs.gov.br/materia/pesquisar-materia do tipo Projeto de Lei, cadastra no banco e disponibiliza também uma api pública. Para acessar a api http://localhost:3000/api/bills
+A aplicação é Web Scraping onde o mesmo busca dados de https://sapl.camaranh.rs.gov.br/materia/pesquisar-materia do tipo Projeto de Lei, cadastra no banco e disponibiliza também uma api pública. Para acessar a api http://localhost:3000/api/bills<br>
+Para capturar essas dados usei a gem Kimurai que auxilia no desenvolvimento do Web Scraping e usa também a Nokogiri, uma das minhas dificuldades maior foi conseguir pegar essas dados pela suas tags usando as tecnologias que citei.<br>
+
+Obs: Ao acessar http://localhost:3000/ tem um botão chamado "Scrape", nessa ação a aplicação executa Web Scraping e busca os dados no site.
 
 # Tecnologias
 
